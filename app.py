@@ -37,17 +37,6 @@ def upload_data_page():
         st.write(f"Selected Controller Output Tag: {selected_mv}")        
         st.write(f"Selected State Variable Tag: {selected_sv}")        
 
-        st.divider()
-        # Create a DataFrame
-        data = {
-            "Variables": ["Selected SP:", "Selected PV:", "Selected MV:"],
-            "Selected Tag": [selected_sp, selected_pv, selected_mv]
-        }
-        df = pd.DataFrame(data)
-
-        # Display selected variables without index column
-        st.write(df.to_markdown(index=False))
-
 
 # Function to display the input thresholds page
 def connect_database_placeholder():
